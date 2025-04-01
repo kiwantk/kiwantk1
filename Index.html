@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 문구</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 4%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">🍴오늘의 메뉴는...🍴</p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "비빔밥",
+                "참치김밥",
+                "불고기김밥",
+                "편의점 도시락",
+                "삼각김밥",
+                "컵라면",
+                "잔치국수",
+                "비빔국수",
+                "칼국수",
+                "베이컨불고기 버거",
+                "싸이버거",
+                "치킨",
+                "피자",
+                "제육복음",
+                "김치찌개",
+                "짜장면",
+                "짬뽕",
+                "쌀국수",
+                "회덮밥",
+                "순대국밥",
+                "오징어불고기",
+                "부대찌개",
+                "곰탕",
+                "냉면",
+                "떡볶이"
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
